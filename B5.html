@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let accounts = [
+            {
+                userName: "user1",
+                password: "1 2387"
+            },
+            {
+                userName: "user1",
+                password: "12387"
+            },
+            {
+                userName: "user1",
+                password: "12 387"
+            }
+        ]
+        let check = false;
+        accounts.find((item,index,arr)=>{
+            if (item.password.includes(" ")) {
+                console.log(`Tài khoản có vị trí ${index} có mật khẩu chứa dấu cách`);
+                check = true;
+            }
+        })
+        if(!check){
+            console.log("Mọi tài khoản đều hợp lệ");
+        }
+    </script>
+</body>
+</html>

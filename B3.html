@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = [10, 20, 'd', false, -8, -2];
+        let result = array.filter((item,index,arr) => {
+            return typeof item === 'number' && item > 0 && Number.isInteger(item);
+        })
+        console.log(result);
+    </script>
+</body>
+</html>
