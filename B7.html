@@ -8,7 +8,15 @@
 <body>
     <script>
         let numbers = [10, 5, 20, 8, 15];
-        let x = 12;
+        let x = 19;
+        let result = numbers.filter(item => item <= x);
+        let max = result[0];
+        result.forEach(number => {
+            if(number > max){
+                max = number;
+            }
+        });
+        console.log(max);
     </script>
 </body>
 </html>
